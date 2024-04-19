@@ -5,7 +5,7 @@ import Reset from './style/Reset'
 import Font from './style/Font'
 import Typography from './style/Typography'
 
-const CODEMIRROR_VERSION = '5.65.5'
+// const CODEMIRROR_VERSION = '5.65.5'
 
 export const HIGHLIGHTS_ONLY = ['shades-of-purple', 'vscode', 'a11y-dark']
 const LOCAL_STYLESHEETS = ['one-light', 'one-dark', 'verminal', 'night-owl', 'nord', 'synthwave-84']
@@ -28,19 +28,13 @@ export const StylesheetLink = ({ theme }) => {
     href = `/static/themes/${theme}.min.css`
   } else {
     const themeDef = THEMES_HASH[theme]
-    href = `//cdnjs.cloudflare.com/ajax/libs/codemirror/${CODEMIRROR_VERSION}/theme/${
-      themeDef && (themeDef.link || themeDef.id)
-    }.min.css`
+    href = `/static/themes/${themeDef && (themeDef.link || themeDef.id)}.min.css`
   }
 
   return <Link href={href} />
 }
 
-export const CodeMirrorLink = () => (
-  <Link
-    href={`//cdnjs.cloudflare.com/ajax/libs/codemirror/${CODEMIRROR_VERSION}/codemirror.min.css`}
-  />
-)
+export const CodeMirrorLink = () => <Link href={`/static/themes/codemirror.min.css`} />
 
 const title = 'Carbon'
 const description =
@@ -71,18 +65,18 @@ export const MetaTags = React.memo(() => (
 export const MetaLinks = React.memo(() => {
   return (
     <React.Fragment>
-      <Link
-        href={`//cdnjs.cloudflare.com/ajax/libs/codemirror/${CODEMIRROR_VERSION}/theme/seti.min.css`}
-      />
+      <Link href={`/static/themes/seti.min.css`} />
       <CodeMirrorLink />
       {LOCAL_STYLESHEETS.map(id => (
         <Link key={id} href={`/static/themes/${id}.min.css`} />
       ))}
       {CDN_STYLESHEETS.map(themeDef => {
-        const href = `//cdnjs.cloudflare.com/ajax/libs/codemirror/${CODEMIRROR_VERSION}/theme/${
-          themeDef && (themeDef.link || themeDef.id)
-        }.min.css`
-        return <Link key={themeDef.id} href={href} />
+        return (
+          <Link
+            key={themeDef.id}
+            href={`/static/themes/${themeDef && (themeDef.link || themeDef.id)}.min.css`}
+          />
+        )
       })}
     </React.Fragment>
   )
