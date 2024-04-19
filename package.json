@@ -67,6 +67,7 @@
   "devDependencies": {
     "@applitools/eyes-cypress": "^3.25.7",
     "all-contributors-cli": "^6.20.0",
+    "crx": "^5.0.1",
     "cypress": "^9.6.1",
     "eslint": "^8.15.0",
     "eslint-config-next": "^12.1.6",
