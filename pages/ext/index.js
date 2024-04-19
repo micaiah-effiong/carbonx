@@ -55,7 +55,7 @@ class Index extends React.Component {
               /* margin-top: 6rem; */
               max-width: 800px;
               min-width: 784px;
-              max-height: 600px;
+              /* max-height: 600px; */
               padding: 13px;
             }
             .login-button-container {
