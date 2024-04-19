@@ -16,12 +16,12 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export && ./bin/build.sh",
     "start": "next start",
     "test:e2e": "npm run cy:run --",
     "deploy": "vercel -S carbon-app",
     "prettier": "prettier --config .prettierrc --write {.,components,lib,pages}/*.js {components,lib,pages}/**/*.js",
-    "lint": "next lint --dir .",
+    "lint": "next lint",
     "contrib:add": "all-contributors add",
     "contrib:build": "all-contributors generate",
     "cy:run": "cypress run --config-file cypress/config.json",
@@ -91,7 +91,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint",
+      "eslint",
       "prettier --config .prettierrc --write"
     ],
     ".all-contributorsrc": [
