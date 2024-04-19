@@ -147,7 +147,7 @@ export default function Reset() {
           font-style: normal;
           text-transform: initial;
           letter-spacing: initial;
-          min-height: 704px;
+          /* min-height: 704px;*/
         }
 
         * {
