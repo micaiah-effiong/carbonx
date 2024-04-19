@@ -1,16 +1,16 @@
 {
-  "name": "carbon",
+  "name": "carbonx",
   "description": "Create and share beautiful images of your source code",
   "version": "4.9.10",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carbon-app/carbon.git"
+    "url": "git+https://github.com/micaiah-effiong/carbonx.git"
   },
   "bugs": {
-    "url": "https://github.com/carbon-app/carbon/issues"
+    "url": "https://github.com/miciah-effiong/carbonx/issues"
   },
-  "homepage": "https://carbon.now.sh",
+  "homepage": "",
   "engines": {
     "node": ">=12"
   },
@@ -18,12 +18,9 @@
     "dev": "next",
     "build": "next build && next export && ./bin/build.sh",
     "start": "next start",
-    "test:e2e": "npm run cy:run --",
-    "deploy": "vercel -S carbon-app",
+    "test:e2e": "cy:run --",
     "prettier": "prettier --config .prettierrc --write {.,components,lib,pages}/*.js {components,lib,pages}/**/*.js",
     "lint": "next lint",
-    "contrib:add": "all-contributors add",
-    "contrib:build": "all-contributors generate",
     "cy:run": "cypress run --config-file cypress/config.json",
     "cy:open": "cypress open --config-file cypress/config.json"
   },
@@ -66,7 +63,6 @@
   },
   "devDependencies": {
     "@applitools/eyes-cypress": "^3.25.7",
-    "all-contributors-cli": "^6.20.0",
     "crx": "^5.0.1",
     "cypress": "^9.6.1",
     "eslint": "^8.15.0",
@@ -94,9 +90,6 @@
     "*.js": [
       "eslint",
       "prettier --config .prettierrc --write"
-    ],
-    ".all-contributorsrc": [
-      "npm run contrib:build"
     ]
   },
   "husky": {
