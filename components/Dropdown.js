@@ -152,6 +152,8 @@ const DropdownContainer = ({ children, innerRef, ...rest }) => {
 
             /* dropdown has a negative 40px let margin */
             width: calc(100% - 40px);
+            z-index: 1;
+            max-height: 40px;
           }
         `}
       </style>
