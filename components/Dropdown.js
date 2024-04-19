@@ -149,6 +149,9 @@ const DropdownContainer = ({ children, innerRef, ...rest }) => {
             cursor: pointer;
             user-select: none;
             margin-left: 40px;
+
+            /* dropdown has a negative 40px let margin */
+            width: calc(100% - 40px);
           }
         `}
       </style>

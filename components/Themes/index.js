@@ -108,7 +108,7 @@ class Themes extends React.PureComponent {
     ]
 
     return (
-      <div className="themes" data-cy="themes-container">
+      <div className="themes w-full" data-cy="themes-container">
         <Dropdown
           title="Theme"
           innerRef={this.dropdown}
@@ -134,6 +134,9 @@ class Themes extends React.PureComponent {
         <GlobalHighlights highlights={highlights} />
         <style jsx>
           {`
+            .w-full {
+              width: 100%;
+            }
             .themes {
               position: relative;
             }
