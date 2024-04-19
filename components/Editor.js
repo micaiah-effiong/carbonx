@@ -337,27 +337,29 @@ class Editor extends React.Component {
     return (
       <div className="editor">
         <Toolbar>
-          <Themes
-            theme={theme}
-            highlights={highlights}
-            update={this.updateTheme}
-            updateHighlights={this.updateHighlights}
-            remove={this.removeTheme}
-            create={this.createTheme}
-            themes={this.props.themes}
-          />
-          <Dropdown
-            title="Language"
-            icon={languageIcon}
-            selected={
-              LANGUAGE_NAME_HASH[language] ||
-              LANGUAGE_MIME_HASH[language] ||
-              LANGUAGE_MODE_HASH[language] ||
-              LANGUAGE_MODE_HASH[DEFAULT_LANGUAGE]
-            }
-            list={LANGUAGES}
-            onChange={this.updateLanguage}
-          />
+          <div className="flex gap">
+            <Themes
+              theme={theme}
+              highlights={highlights}
+              update={this.updateTheme}
+              updateHighlights={this.updateHighlights}
+              remove={this.removeTheme}
+              create={this.createTheme}
+              themes={this.props.themes}
+            />
+            <Dropdown
+              title="Language"
+              icon={languageIcon}
+              selected={
+                LANGUAGE_NAME_HASH[language] ||
+                LANGUAGE_MIME_HASH[language] ||
+                LANGUAGE_MODE_HASH[language] ||
+                LANGUAGE_MODE_HASH[DEFAULT_LANGUAGE]
+              }
+              list={LANGUAGES}
+              onChange={this.updateLanguage}
+            />
+          </div>
           <div className="toolbar-second-row">
             <div className="setting-buttons">
               <BackgroundSelect
@@ -432,7 +434,9 @@ class Editor extends React.Component {
               border-radius: 8px;
               padding: 16px;
             }
-
+            .gap {
+              gap: 13px;
+            }
             .share-buttons,
             .setting-buttons {
               display: flex;
@@ -455,7 +459,7 @@ class Editor extends React.Component {
             }
             @media (max-width: 768px) {
               .toolbar-second-row {
-                display: block;
+                display: flex;
               }
               #style-editor-button {
                 margin-top: 0.5rem;
