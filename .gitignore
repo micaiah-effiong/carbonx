@@ -14,3 +14,4 @@ private-key.json
 .now
 .vercel
 *.log
+*.nvim
