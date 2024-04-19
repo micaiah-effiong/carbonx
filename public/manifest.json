@@ -1,22 +1,11 @@
 {
   "name": "Carbon",
   "short_name": "Carbon",
-  "background_color": "#121212",
-  "theme_color": "#121212",
   "description": "Carbon is the easiest way to create and share beautiful images of your source code.",
-  "display": "standalone",
-  "start_url": "/",
-  "icons": [
-    {
-      "src": "/static/brand/icon.png",
-      "type": "image/png",
-      "sizes": "448x448",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/static/brand/desktop.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ]
+  "manifest_version": 3,
+  "version": "1.0",
+  "action": {
+    "default_popup": "ext.html",
+    "default_icon": "/static/brand/icon.png"
+  }
 }
