@@ -1,4 +1,4 @@
-!#/usr/bin/env bash
+#!/usr/bin/env bash
 
 mv out/_next out/next 
 cd out
