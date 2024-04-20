@@ -16,3 +16,4 @@ private-key.json
 *.log
 *.nvim
 *.pem
+*.crx
