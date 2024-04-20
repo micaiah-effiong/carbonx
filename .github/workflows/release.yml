@@ -23,7 +23,9 @@ jobs:
         run: echo "$KEY" > key.pem
 
       - name: Build crx
-        run: yarn build:crx
+        run: |
+          yarn build
+          yarn build:crx
 
       - uses: actions/upload-artifact@v4
         with:
