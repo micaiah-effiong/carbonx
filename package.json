@@ -17,6 +17,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export && ./bin/build.sh",
+    "build:crx": "crx pack out -o carbonx.crx",
     "start": "next start",
     "test:e2e": "cy:run --",
     "prettier": "prettier --config .prettierrc --write {.,components,lib,pages}/*.js {components,lib,pages}/**/*.js",

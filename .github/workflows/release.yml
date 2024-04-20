@@ -1,0 +1,29 @@
+name: Release
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+
+      - name: Test
+        run: |
+          yarn # install modules
+          yarn lint
+
+      - name: Add private key
+        run: ${{ secrets.PRIVATE_KEY }} > key.pem
+
+      - name: Build crx
+        run: yarn build:crx
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: carbonx
+          path: carbonx.crx
