@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='3ec3ef805744812e16da9749f69c312a29323c8b9e5fc47288aae4fc8ceec234'>
-    <updatecheck codebase='https://api.github.com/repos/micaiah-effiong/carbonx/actions/artifacts/1/crx' version='1.0' />
+    <updatecheck codebase='https://api.github.com/repos/micaiah-effiong/carbonx/actions/artifacts/1432442588/zip' version='1.0' />
   </app>
 </gupdate>
