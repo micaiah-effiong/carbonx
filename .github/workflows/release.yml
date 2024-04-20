@@ -18,7 +18,9 @@ jobs:
           yarn lint
 
       - name: Add private key
-        run: ${{ secrets.PRIVATE_KEY }} > key.pem
+        env:
+          KEY: ${{ secrets.PRIVATE_KEY }}
+        run: echo "$KEY" > key.pem
 
       - name: Build crx
         run: yarn build:crx
