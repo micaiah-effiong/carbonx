@@ -18,7 +18,7 @@ To build run
 ```sh
 make build
 # or
-npm && npm build && npm build:crx
+npm && npm run build && npm run build:crx
 ```
 
 This will generate a `dist/carbonx.crx` file

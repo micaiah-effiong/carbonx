@@ -1,10 +1,10 @@
 build: install generate-html build-crx
 
 install:
-	npm
+	npm install
 
 generate-html:
-	npm build
+	npm run build
 
 build-crx:
-	npm build:crx
+	npm run build:crx

@@ -24,8 +24,8 @@ jobs:
 
       - name: Build crx
         run: |
-          npm build
-          npm build:crx
+          npm run build
+          npm run build:crx
 
       - uses: actions/upload-artifact@v4
         with:
