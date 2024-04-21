@@ -95,10 +95,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "overrides": {
-    "actionsack": {
-      "react": "$react"
-    }
   }
 }
