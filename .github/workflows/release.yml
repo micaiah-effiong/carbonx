@@ -14,8 +14,8 @@ jobs:
 
       - name: Test
         run: |
-          yarn # install modules
-          yarn lint
+          npm # install modules
+          npm lint
 
       - name: Add private key
         env:
@@ -24,8 +24,8 @@ jobs:
 
       - name: Build crx
         run: |
-          yarn build
-          yarn build:crx
+          npm build
+          npm build:crx
 
       - uses: actions/upload-artifact@v4
         with:

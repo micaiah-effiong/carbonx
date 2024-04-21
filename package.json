@@ -12,7 +12,7 @@
   },
   "homepage": "",
   "engines": {
-    "node": ">=12"
+    "node": ">=18"
   },
   "scripts": {
     "dev": "next",
@@ -30,7 +30,6 @@
     "@reach/visually-hidden": "^0.17.0",
     "actionsack": "^0.0.15",
     "axios": "^0.28.0",
-    "chrome-aws-lambda": "^8.0.2",
     "cm-show-invisibles": "^3.1.0",
     "codemirror": "5.65.5",
     "codemirror-graphql": "^1.3.0",
@@ -95,6 +94,11 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
+    }
+  },
+  "overrides": {
+    "actionsack": {
+      "react": "$react"
     }
   }
 }
