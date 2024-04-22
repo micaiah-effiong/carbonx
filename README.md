@@ -16,7 +16,7 @@ cd carbonx
 To build run
 
 ```sh
-make build
+make
 # or
 npm && npm run build && npm run build:crx
 ```
