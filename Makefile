@@ -1,7 +1,7 @@
 build: install generate-html build-crx
 
 install:
-	npm install
+	npm install --legacy-peer-deps
 
 generate-html:
 	npm run build
