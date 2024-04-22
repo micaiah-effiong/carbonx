@@ -1,10 +1,8 @@
 import React from 'react'
-import AuthContext from './AuthContext'
 import Meta from './Meta'
 import Header from './Header'
 import Footer from './Footer'
 import Announcement from './Announcement'
-import LoginButton from './LoginButton'
 
 const COLUMN = `
   display: flex;
@@ -18,14 +16,11 @@ class Page extends React.Component {
     return (
       <main className="main mb3">
         <Meta />
-        <AuthContext>
+        <>
           <Announcement />
           <Header enableHeroText={enableHeroText} />
-          <div className="login-button-container">
-            <LoginButton />
-          </div>
           <div className="page">{children}</div>
-        </AuthContext>
+        </>
 
         <Footer />
 

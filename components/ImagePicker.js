@@ -3,7 +3,6 @@ import ReactCrop, { makeAspectCrop } from 'react-image-crop'
 import { useLocalStorage } from 'actionsack'
 
 import RandomImage from './RandomImage'
-import PhotoCredit from './PhotoCredit'
 import Input from './Input'
 import Toggle from './Toggle'
 import { Link } from './Meta'
@@ -290,7 +289,6 @@ export default class ImagePicker extends React.Component {
               minWidth={10}
               keepSelection
             />
-            {this.state.photographer && <PhotoCredit photographer={this.state.photographer} />}
           </div>
           <style jsx>
             {`

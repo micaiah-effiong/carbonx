@@ -3,7 +3,6 @@ import { useAsyncCallback } from 'actionsack'
 
 import { Spinner } from './Spinner'
 import { useAPI } from './ApiContext'
-import PhotoCredit from './PhotoCredit'
 
 function RandomImage(props) {
   const cacheRef = React.useRef([])
@@ -37,7 +36,6 @@ function RandomImage(props) {
   const loading = updating || selecting
 
   const cache = cacheRef.current
-  const photographer = cache[cacheIndex] && cache[cacheIndex].photographer
   const bgImage = cache[cacheIndex] && cache[cacheIndex].dataURL
   return (
     <div className="random-image-container">
@@ -50,7 +48,6 @@ function RandomImage(props) {
         </button>
       </div>
       <div className="image">{loading && <Spinner />}</div>
-      {photographer && <PhotoCredit photographer={photographer} />}
       <style jsx>
         {`
           .image {

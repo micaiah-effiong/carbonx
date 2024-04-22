@@ -4,7 +4,6 @@ import Router from 'next/router'
 
 import Editor from './Editor'
 import Toasts from './Toasts'
-import { useAuth } from './AuthContext'
 
 import { THEMES } from '../lib/constants'
 import { updateRouteState } from '../lib/routing'
@@ -37,7 +36,6 @@ function toastsReducer(curr, action) {
 
 function EditorContainer(props) {
   const [themes, updateThemes] = React.useState(THEMES)
-  const user = useAuth()
 
   React.useEffect(() => {
     const storedThemes = getThemes(localStorage) || []
@@ -65,9 +63,6 @@ function EditorContainer(props) {
   }, [snippetId, props.router])
 
   function onEditorUpdate(state) {
-    if (user) {
-      return
-    }
     updateRouteState(props.router, state)
     saveSettings(state)
   }

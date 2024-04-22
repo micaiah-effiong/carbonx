@@ -7,7 +7,6 @@ import Input from './Input'
 import ConfirmButton from './ConfirmButton'
 import Popout, { managePopout } from './Popout'
 import { Down as ArrowDown } from './svg/Arrows'
-import { useAuth } from './AuthContext'
 
 import { COLORS } from '../lib/constants'
 
@@ -83,7 +82,6 @@ function SaveButton({ loading, onClick, sameUser }) {
 }
 
 function SnippetToolbar({ toggleVisibility, isVisible, snippet, ...props }) {
-  const user = useAuth()
   const online = useOnline()
 
   const [save, { loading }] = useAsyncCallback(() => {
@@ -95,9 +93,8 @@ function SnippetToolbar({ toggleVisibility, isVisible, snippet, ...props }) {
   })
 
   if (!online) return null
-  if (!user) return null
 
-  const sameUser = snippet && user.uid === snippet.userId
+  const sameUser = snippet
 
   return (
     <Toolbar
