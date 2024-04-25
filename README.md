@@ -30,5 +30,6 @@ This will generate a `dist/carbonx.crx` file
 ### Importing
 
 1. Launch Chrome
-1. Visit `chrome://extensions`
-1. Drag and drop `carbonx.crx"
+2. Visit `chrome://extensions`
+3. Enable developer mode
+4. Drag and drop `carbonx.crx"
