@@ -2,6 +2,10 @@
 
 A chrome extension for carbon.now.sh
 
+## Requirement
+- node >8 <21 
+- npm
+
 ## Installation
 
 First clone the repository
